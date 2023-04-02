@@ -1,6 +1,5 @@
 package com.bdd.demo.definition;
 
-import com.bdd.demo.config.CucumberSpringConfig;
 import com.bdd.demo.model.InstantWin;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
@@ -15,8 +14,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.web.client.RestTemplate;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class IWStepdefs {
@@ -44,8 +43,8 @@ public class IWStepdefs {
         mongoTemplate.insert(iwData);
     }
 
-    @When("User makes get call with storeId {int} and number {int}")
-    public void userMakesGetCallWithStoreIdAndNumber(int storeId, int txnId) {
+    @When("User makes get call with storeId {int} and txnId {int}")
+    public void userMakesGetCallWithStoreIdAndTxnId(int storeId, int txnId) {
         String uri = "http://localhost:" + serverPort + "/instantwin?storeId=" + +storeId + "&txnId=" + txnId;
         instantWinResponse = restTemplate.getForEntity(uri, Boolean.class).getBody();
     }
