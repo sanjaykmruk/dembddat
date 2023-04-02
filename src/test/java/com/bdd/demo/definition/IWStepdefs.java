@@ -18,9 +18,8 @@ import org.springframework.web.client.RestTemplate;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-//@ExtendWith(SpringExtension.class)
 
-public class IWStepdefs extends CucumberSpringConfig {
+public class IWStepdefs {
 
     @Autowired
     MongoTemplate mongoTemplate;
