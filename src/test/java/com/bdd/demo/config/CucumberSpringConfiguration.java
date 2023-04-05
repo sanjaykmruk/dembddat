@@ -1,6 +1,7 @@
 package com.bdd.demo.config;
 
 import com.bdd.demo.DemoBddApplication;
+import io.cucumber.junit.CucumberOptions;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.junit.Before;
 import org.slf4j.Logger;
@@ -12,8 +13,8 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 
 @CucumberContextConfiguration
 @SpringBootTest(classes = DemoBddApplication.class, webEnvironment = RANDOM_PORT)
-public class CucumberSpringConfig {
-    private static final Logger logger = LoggerFactory.getLogger(CucumberSpringConfig.class);
+public class CucumberSpringConfiguration {
+    private static final Logger logger = LoggerFactory.getLogger(CucumberSpringConfiguration.class);
 
     @Before
     public void setUp() {
