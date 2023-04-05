@@ -1,7 +1,7 @@
 Feature: Get Instant Win
 
-#  Background: Reset the DB
-#    Given database is empty
+  Background: Reset the DB
+    Given database is empty
 
   Scenario: Allocate Instant Win If your input matches winning transaction id
     Given  IW collection contains a document with storeId 123 and transaction id 3 and counter as 2

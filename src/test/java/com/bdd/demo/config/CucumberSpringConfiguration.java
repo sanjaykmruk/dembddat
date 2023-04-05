@@ -1,7 +1,6 @@
 package com.bdd.demo.config;
 
 import com.bdd.demo.DemoBddApplication;
-import io.cucumber.junit.CucumberOptions;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.junit.Before;
 import org.slf4j.Logger;
